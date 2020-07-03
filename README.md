@@ -5,6 +5,7 @@
 
 The cluster agent is configured for automatic instrumentation of java applications.
 
-K8S - Contains the YAML files for deploying the cluster operator and agent
+* k8s_appd - Contains the YAML files for deploying the cluster operator and agent
+* k8s_boomi - contians the k8s boomi molecule reference arch
 
 
