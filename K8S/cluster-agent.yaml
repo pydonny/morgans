@@ -1,0 +1,23 @@
+apiVersion: appdynamics.com/v1alpha1
+kind: Clusteragent
+metadata:
+  name: k8s-cluster-agent
+  namespace: appdynamics
+spec:
+  appName: "<TBA APPLICATION NAME>"
+  controllerUrl: "https://morgans-pov.saas.appdynamics.com"
+  account: "customer1"
+  # docker image info
+  image: "docker.io/appdynamics/cluster-agent:20.6.0"
+  serviceAccountName: appdynamics-cluster-agent
+  # enable Java auto instrumentation 
+  instrumentationMethod: Env
+  nsToInstrumentRegex: ecom
+  defaultAppName: Ecommerce
+  imageInfo:
+    java:
+      image: "docker.io/appdynamics/java-agent:20.3.0"
+      agentMountPath: /opt/appdynamics
+  ### Uncomment the following two lines if you need pull secrets
+  #imagePullSecrets:
+  #  name: "<your-docker-pull-secret-name>"
