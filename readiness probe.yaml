@@ -1,0 +1,16 @@
+livenessProbe:
+  httpGet:
+    # when "host" is not defined, "PodIP" will be used
+    # host: my-host
+    # when "scheme" is not defined, "HTTP" scheme will be used. Only "HTTP" and "HTTPS" are allowed
+    # scheme: HTTPS
+    path: /ping/simple
+    port: 8080
+  initialDelaySeconds: 60
+  timeoutSeconds: 1
+readinessProbe:
+  httpGet:
+    path: /ping/simple
+    port: 8080
+  initialDelaySeconds: 60
+  timeoutSeconds: 1
