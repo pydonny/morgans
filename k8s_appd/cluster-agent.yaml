@@ -12,8 +12,8 @@ spec:
   serviceAccountName: appdynamics-cluster-agent
   # enable Java auto instrumentation 
   instrumentationMethod: Env
-  nsToInstrumentRegex: ecom
-  defaultAppName: Ecommerce
+  nsToInstrumentRegex: default
+  defaultAppName: morgans_uat
   imageInfo:
     java:
       image: "docker.io/appdynamics/java-agent:20.3.0"
