@@ -4,7 +4,7 @@ metadata:
   name: k8s-cluster-agent
   namespace: appdynamics
 spec:
-  appName: "<TBA APPLICATION NAME>"
+  appName: "morgans_uat"
   controllerUrl: "https://morgans-pov.saas.appdynamics.com"
   account: "customer1"
   # docker image info
