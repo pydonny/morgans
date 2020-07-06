@@ -24,6 +24,10 @@ rules:
       - configmaps
       - secrets
     verbs:
+      - create
+      - update
+      - patch
+      - delete
       - get
       - watch
       - list
@@ -35,6 +39,10 @@ rules:
       - deployments
       - replicasets
     verbs:
+      - create
+      - update
+      - patch
+      - delete
       - get
       - watch
       - list
@@ -44,6 +52,10 @@ rules:
     resources:
       - "jobs"
     verbs:
+      - create
+      - update
+      - patch
+      - delete
       - "get"
       - "list"
       - "watch"
@@ -53,6 +65,10 @@ rules:
       - pods
       - nodes
     verbs:
+      - create
+      - update
+      - patch
+      - delete
       - get
       - list
       - watch
@@ -62,6 +78,10 @@ rules:
       - '*'
       - clusteragents
     verbs:
+      - create
+      - update
+      - patch
+      - delete
       - get
       - list
       - watch
