@@ -85,11 +85,19 @@ metadata:
   name: k8s-cluster-agent
   namespace: appdynamics
 spec:
-  controllerUrl: "https://<account>.saas.appdynamics.com"
-  account: "customer1"
-  appName: "<ClusterName>"
+  controllerUrl: "https://morgans-pov.saas.appdynamics.com"
+  account: "morgans-pov"
+  appName: "morgans-uat"
   serviceAccountName: appdynamics-cluster-agent
   logLevel: "INFO"
   image: "docker.io/appdynamics/cluster-agent:latest"
   stdoutLogging: "true"
   nsToMonitor: [appdynamics,default,dev]
+  instrumentationMethod: Env
+  nsToInstrumentRegex: default|appdynamics
+  defaultAppName: Morgans-UAT
+  resourcesToInstrument: [Deployment, StatefulSet]
+  imageInfo:
+    java:
+      image: "docker.io/appdynamics/java-agent:latest"
+      agentMountPath: /opt/appdynamics
