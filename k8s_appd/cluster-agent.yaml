@@ -8,7 +8,7 @@ spec:
   controllerUrl: "https://morgans-pov.saas.appdynamics.com"
   account: "morgans-pov"
   # docker image info
-  image: "docker.io/appdynamics/cluster-agent:lattest"
+  image: "docker.io/appdynamics/cluster-agent:latest"
   serviceAccountName: appdynamics-cluster-agent
   #START ClusterAgent Logging Configuration
   logLevel: DEBUG
