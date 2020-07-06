@@ -6,7 +6,6 @@ metadata:
 spec:
   appName: "morgans_uat"
   controllerUrl: "https://morgans-pov.saas.appdynamics.com:443"
-  sslEnabled: true
   account: "morgans-pov"
   # docker image info
   image: "docker.io/appdynamics/cluster-agent:latest"
@@ -15,14 +14,14 @@ spec:
   logLevel: DEBUG
   logFileSizeMb: 7
   logFileBackups: 6
-  # enable Java auto instrumentation 
+  # enable Java auto instrumentation
   nsToMonitor:
     - "default"
     - "appdynamics"
   instrumentationMethod: Env
   nsToInstrumentRegex: default|appdynamics
   defaultAppName: Morgans-UAT
-  resourcesToInstrument: [Deployment,StatefulSet]
+  resourcesToInstrument: [Deployment, StatefulSet]
   imageInfo:
     java:
       image: "docker.io/appdynamics/java-agent:latest"
