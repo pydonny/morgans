@@ -8,10 +8,16 @@ spec:
   controllerUrl: "https://morgans-pov.saas.appdynamics.com"
   account: "morgans-pov"
   # docker image info
-  image: "docker.io/appdynamics/cluster-agent:20.6.0"
+  image: "docker.io/appdynamics/cluster-agent:lattest"
   serviceAccountName: appdynamics-cluster-agent
+  #START ClusterAgent Logging Configuration
+  logLevel: DEBUG
+  logFileSizeMb: 7
+  logFileBackups: 6
   # enable Java auto instrumentation 
-  nsToMonitor: [appdynamics,default]
+  nsToMonitor:
+    - "default"
+    - "appdynamics"
   instrumentationMethod: Env
   nsToInstrumentRegex: default|appdynamics
   defaultAppName: Morgans-UAT
