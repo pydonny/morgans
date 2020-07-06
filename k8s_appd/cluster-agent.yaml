@@ -11,12 +11,14 @@ spec:
   image: "docker.io/appdynamics/cluster-agent:20.6.0"
   serviceAccountName: appdynamics-cluster-agent
   # enable Java auto instrumentation 
+  nsToMonitor: [appdynamics,default]
   instrumentationMethod: Env
-  nsToMonitor: [appdynamics,default] 
-  defaultAppName: morgans_uat
+  nsToInstrumentRegex: default|appdynamics
+  defaultAppName: Morgans-UAT
+  resourcesToInstrument: [Deployment,StatefulSet]
   imageInfo:
     java:
-      image: "docker.io/appdynamics/java-agent:20.3.0"
+      image: "docker.io/appdynamics/java-agent:latest"
       agentMountPath: /opt/appdynamics
   ### Uncomment the following two lines if you need pull secrets
   #imagePullSecrets:
