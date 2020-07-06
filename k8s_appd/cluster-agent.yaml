@@ -12,7 +12,7 @@ spec:
   serviceAccountName: appdynamics-cluster-agent
   # enable Java auto instrumentation 
   instrumentationMethod: Env
-  nsToInstrumentRegex: default
+  nsToMonitor: [appdynamics,default] 
   defaultAppName: morgans_uat
   imageInfo:
     java:
