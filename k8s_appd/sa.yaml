@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: appd-account
+  name: appdynamics-cluster-agent
