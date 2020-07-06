@@ -1,0 +1,10 @@
+apiVersion: appdynamics.com/v1alpha1
+kind: Clusteragent
+metadata:
+  name: local-k8s
+spec:
+  controllerUrl: "https://saas.appdynamics.com"
+  account: "customer2"
+  appName: "Cluster2"
+  logLevel: "DEBUG"
+  stdoutLogging: "true"
