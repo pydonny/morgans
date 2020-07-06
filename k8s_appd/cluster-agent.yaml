@@ -5,7 +5,8 @@ metadata:
   namespace: appdynamics
 spec:
   appName: "morgans_uat"
-  controllerUrl: "https://morgans-pov.saas.appdynamics.com"
+  controllerUrl: "https://morgans-pov.saas.appdynamics.com:443"
+  sslEnabled: true
   account: "morgans-pov"
   # docker image info
   image: "docker.io/appdynamics/cluster-agent:latest"
